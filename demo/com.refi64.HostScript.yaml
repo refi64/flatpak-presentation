@@ -1,0 +1,18 @@
+app-id: com.refi64.HostScript
+runtime: org.gnome.Platform
+runtime-version: '3.32'
+sdk: org.gnome.Sdk
+command: host-script
+finish-args:
+  - '--talk-name=org.freedesktop.Flatpak'
+  - '--share=ipc'
+  - '--socket=x11'
+  - '--socket=wayland'
+modules:
+  - name: host-script
+    buildsystem: simple
+    build-commands:
+      - 'install -Dm 755 host-script.py /app/bin/host-script'
+    sources:
+      - type: file
+        path: host-script.py

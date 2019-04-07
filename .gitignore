@@ -1,0 +1,5 @@
+demo/_build
+demo/.flatpak-builder
+image.png
+build/
+node_modules/
